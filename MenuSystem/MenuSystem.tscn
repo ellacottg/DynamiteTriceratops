@@ -5,12 +5,47 @@
 [node name="MenuSystem" type="Node2D"]
 script = ExtResource("1_3yy5b")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 504.0
-offset_top = 217.0
-offset_right = 639.0
-offset_bottom = 253.0
+[node name="btn" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 614.0
+offset_top = 184.0
+offset_right = 942.0
+offset_bottom = 466.0
+
+[node name="Option" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = 356.0
+offset_right = 194.0
+offset_bottom = 394.0
+text = "Options"
+
+[node name="btnMultiplayer" type="Button" parent="."]
+offset_left = 63.0
+offset_top = 278.0
+offset_right = 198.0
+offset_bottom = 314.0
+text = "Multiplayer
+"
+
+[node name="btnSingleplayer" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 201.0
+offset_right = 199.0
+offset_bottom = 237.0
+text = "Single Player
+"
+
+[node name="btnQuit" type="Button" parent="."]
+offset_left = 60.0
+offset_top = 429.0
+offset_right = 195.0
+offset_bottom = 465.0
 text = "Quit
 "
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="btnQuit" to="." method="_on_button_pressed"]

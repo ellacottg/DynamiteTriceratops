@@ -16,7 +16,7 @@ public partial class MenuSystem : Node2D
 	{
 		GetTree().Quit();
 	}
-
+	
 }
 
 
