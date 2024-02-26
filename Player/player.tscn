@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dh83as4utdnoh" path="res://icon.svg" id="1_qdup2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_517xn"]
-radius = 6.0
-height = 12.0
+radius = 63.0
+height = 254.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_moch7")
@@ -14,5 +14,8 @@ script = ExtResource("1_moch7")
 shape = SubResource("CapsuleShape2D_517xn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(1, 2)
 texture = ExtResource("1_qdup2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
