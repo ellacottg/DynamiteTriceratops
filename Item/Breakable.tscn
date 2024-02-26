@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhld2bao7fg1d"]
+
+[ext_resource type="PackedScene" uid="uid://bdfecx7d50mne" path="res://Components/Health/HealthComponent.tscn" id="1_5xwwv"]
+[ext_resource type="PackedScene" uid="uid://dilsb2yo1jr5x" path="res://Components/Hitbox/HitboxComponent.tscn" id="2_rt5j8"]
+[ext_resource type="Texture2D" uid="uid://dh83as4utdnoh" path="res://icon.svg" id="3_8dkh7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tlw5"]
+size = Vector2(126, 127)
+
+[sub_resource type="Animation" id="Animation_e7brt"]
+resource_name = "damage"
+length = 0.45
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5, 0), Vector2(5, 0), Vector2(0, 5), Vector2(0, 0), Vector2(5, -5), Vector2(-5, 5), Vector2(5, 5), Vector2(5, 5), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lw2ch"]
+_data = {
+"damage": SubResource("Animation_e7brt")
+}
+
+[node name="Breakable" type="Node2D"]
+position = Vector2(10, 0)
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_5xwwv")]
+MAX_HEALTH = 5
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component", "animation_player") instance=ExtResource("2_rt5j8")]
+position = Vector2(1, 1)
+scale = Vector2(2, 2)
+health_component = NodePath("../HealthComponent")
+animation_player = NodePath("../AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("RectangleShape2D_6tlw5")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("3_8dkh7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lw2ch")
+}

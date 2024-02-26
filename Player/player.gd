@@ -16,11 +16,12 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		
+	
+	#check for attack
 	if Input.is_action_just_released("Attack"):
-		$AttackComponent/CollisionShape2D.disabled = false;
+		$AttackComponent/CollisionShape2D.disabled = false
 	else:
-		$AttackComponent/CollisionShape2D.disabled = true;
+		$AttackComponent/CollisionShape2D.disabled = true
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
