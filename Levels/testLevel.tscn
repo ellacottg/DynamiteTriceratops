@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7piennwx2jtj"]
+[gd_scene load_steps=4 format=3 uid="uid://c7piennwx2jtj"]
 
 [ext_resource type="TileSet" uid="uid://qpmcjdfnb0nw" path="res://Levels/tileset.tres" id="1_bchf5"]
 [ext_resource type="PackedScene" uid="uid://2w78n42tnyct" path="res://Player/player.tscn" id="2_j3dln"]
+[ext_resource type="PackedScene" uid="uid://dhld2bao7fg1d" path="res://Breakable.tscn" id="3_g2d0a"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -13,3 +14,6 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0
 
 [node name="Player" parent="." instance=ExtResource("2_j3dln")]
 position = Vector2(1077, 951)
+
+[node name="Breakable" parent="." instance=ExtResource("3_g2d0a")]
+position = Vector2(2048, 1665)
