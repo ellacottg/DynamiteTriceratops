@@ -12,6 +12,10 @@ public partial class MenuSystem : Node2D
 	public override void _Process(double delta)
 	{
 	}
+	private void _on_btn_singleplayer_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Levels/testLevel.tscn");
+	}
 	private void _on_btn_option_pressed()
 	{
 		GetTree().ChangeSceneToFile("res://MenuSystem/Options/options.tscn");
@@ -22,6 +26,9 @@ public partial class MenuSystem : Node2D
 	}
 	
 }
+
+
+
 
 
 

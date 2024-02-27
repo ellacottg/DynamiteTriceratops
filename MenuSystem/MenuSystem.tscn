@@ -148,4 +148,5 @@ text = "Quit
 "
 
 [connection signal="pressed" from="btnOption" to="." method="_on_btn_option_pressed"]
+[connection signal="pressed" from="btnSingleplayer" to="." method="_on_btn_singleplayer_pressed"]
 [connection signal="pressed" from="btnQuit" to="." method="_on_button_pressed"]
