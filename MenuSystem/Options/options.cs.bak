@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using SpectreDispatcher;
+Using SpectreDispatcher;
 
 public partial class options : Node2D
 {
