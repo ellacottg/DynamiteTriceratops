@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 # Commit Justin
 
 const SPEED = 600.0
