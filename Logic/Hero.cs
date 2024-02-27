@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Xml.Schema;
+using Godot;
 
 namespace SpectreDispatcher {
 	
@@ -15,11 +16,14 @@ namespace SpectreDispatcher {
 		// }
 
 		private int gear;
+		private int[] inventory; // array of inventory quantities
 
 		public Hero(int energy, int str) {
 			Energy = energy;
 			Strength = str;
 			Items = new Item[Common.CountAllResources()];
+			inventory = new int[Common.CountAllResources()];
+			GD.Print("inventory slots = " + inventory.Length + " | items size = " + Items.Length);
 			gear = 0;
 		}
 
