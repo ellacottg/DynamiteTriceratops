@@ -24,7 +24,6 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	if area is Player:
-		#add to the inventory
-		print_debug("Beans")
+	if area is PickupComponent:
+		# add to player inventory
 		queue_free()
