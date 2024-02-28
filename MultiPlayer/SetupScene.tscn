@@ -33,6 +33,25 @@ offset_right = 439.0
 offset_bottom = 278.0
 text = "Start Game"
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.244
+anchor_right = -0.068
+anchor_bottom = 1.0
+offset_left = 488.088
+offset_top = 59.0
+offset_right = 487.88
+offset_bottom = 51.0
+text = "Name:"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 58.0
+offset_right = 590.0
+offset_bottom = 89.0
+
 [connection signal="pressed" from="btnJoin" to="." method="_on_btn_join_pressed"]
 [connection signal="pressed" from="btnHost" to="." method="_on_btn_host_pressed"]
 [connection signal="pressed" from="btnStartGame" to="." method="_on_btn_start_game_pressed"]

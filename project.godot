@@ -15,6 +15,10 @@ run/main_scene="res://MenuSystem/MenuSystem.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MultiplayerManager="*res://MultiPlayer/MultiplayerManager.gd"
+
 [dotnet]
 
 project/assembly_name="Dynamite Triceratops"

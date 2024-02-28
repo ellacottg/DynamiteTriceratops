@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2w78n42tnyct"]
+[gd_scene load_steps=9 format=3 uid="uid://2w78n42tnyct"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_moch7"]
 [ext_resource type="Texture2D" uid="uid://dh83as4utdnoh" path="res://icon.svg" id="1_qdup2"]
@@ -14,6 +14,11 @@ size = Vector2(124, 123)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4lgys"]
 radius = 127.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_dcrxg"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 0
@@ -40,3 +45,6 @@ shape = SubResource("RectangleShape2D_g4l3i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupComponent"]
 shape = SubResource("CircleShape2D_4lgys")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_dcrxg")
