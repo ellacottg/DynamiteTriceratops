@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bumrto54ui7dg"]
+
+[ext_resource type="Script" path="res://MultiPlayer/SetupScene.gd" id="1_ws2wv"]
+
+[node name="SetupScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ws2wv")
+
+[node name="btnJoin" type="Button" parent="."]
+offset_left = 334.0
+offset_top = 182.0
+offset_right = 436.0
+offset_bottom = 219.0
+text = "Join"
+
+[node name="btnHost" type="Button" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 118.0
+offset_right = 436.0
+offset_bottom = 155.0
+text = "Host"
+
+[node name="btnStartGame" type="Button" parent="."]
+offset_left = 337.0
+offset_top = 241.0
+offset_right = 439.0
+offset_bottom = 278.0
+text = "Start Game"
+
+[connection signal="pressed" from="btnJoin" to="." method="_on_btn_join_pressed"]
+[connection signal="pressed" from="btnHost" to="." method="_on_btn_host_pressed"]
+[connection signal="pressed" from="btnStartGame" to="." method="_on_btn_start_game_pressed"]

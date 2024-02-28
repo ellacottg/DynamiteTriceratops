@@ -1,7 +1,7 @@
 namespace SpectreDispatcher {
 
-    public class Trap : Item {
+	public class Trap : Item {
 
-    }
+	}
 
 }

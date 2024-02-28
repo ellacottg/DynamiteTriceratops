@@ -1,7 +1,7 @@
 namespace SpectreDispatcher {
 
-    public class Tool : Item {
+	public class Tool : Item {
 
-    }
+	}
 
 }

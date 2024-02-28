@@ -1,7 +1,7 @@
 namespace SpectreDispatcher {
 
-    public class Block : Item {
+	public class Block : Item {
 
-    }
+	}
 
 }
