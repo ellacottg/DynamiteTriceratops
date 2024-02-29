@@ -1,8 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7piennwx2jtj"]
+[gd_scene load_steps=5 format=3 uid="uid://c7piennwx2jtj"]
 
 [ext_resource type="TileSet" uid="uid://qpmcjdfnb0nw" path="res://Levels/tileset.tres" id="1_bchf5"]
 [ext_resource type="PackedScene" uid="uid://cdvunfg8rkpxo" path="res://Player/player_2.tscn" id="2_lju65"]
 [ext_resource type="PackedScene" uid="uid://dhld2bao7fg1d" path="res://Item/Breakable.tscn" id="3_g2d0a"]
+
+[sub_resource type="GDScript" id="GDScript_8qwof"]
+resource_name = "EnemyType1"
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
 
 [node name="TestLevel" type="Node2D"]
 
@@ -22,4 +54,17 @@ position = Vector2(2814, 1023)
 position = Vector2(2048, 1664)
 
 [node name="Player" parent="." instance=ExtResource("2_lju65")]
-position = Vector2(431, 646)
+position = Vector2(1656, 693)
+
+[node name="Ememy1" type="Node2D" parent="."]
+position = Vector2(274.978, 1820.78)
+
+[node name="Enemy2" type="Node2D" parent="Ememy1"]
+position = Vector2(3848.02, -20.7847)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Ememy1"]
+position = Vector2(4.02246, -152.785)
+
+[node name="EnemyType1" parent="Ememy1" instance=ExtResource("2_lju65")]
+position = Vector2(406.022, -254.785)
+script = SubResource("GDScript_8qwof")
