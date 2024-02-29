@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_ws2wv")
 
 [node name="btnJoin" type="Button" parent="."]
+layout_mode = 0
 offset_left = 334.0
 offset_top = 182.0
 offset_right = 436.0
@@ -27,6 +28,7 @@ offset_bottom = 155.0
 text = "Host"
 
 [node name="btnStartGame" type="Button" parent="."]
+layout_mode = 0
 offset_left = 337.0
 offset_top = 241.0
 offset_right = 439.0

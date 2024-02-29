@@ -27,13 +27,13 @@ position = Vector2(2048, 1664)
 [node name="SpawnLocation" type="Node2D" parent="."]
 
 [node name="0" type="Node2D" parent="SpawnLocation" groups=["PlayerSpawnPoint"]]
-position = Vector2(949, 1634)
+position = Vector2(225, 1628)
 
 [node name="1" type="Node2D" parent="SpawnLocation" groups=["PlayerSpawnPoint"]]
-position = Vector2(449, 1655)
+position = Vector2(348, 1630)
 
 [node name="2" type="Node2D" parent="SpawnLocation" groups=["PlayerSpawnPoint"]]
-position = Vector2(656, 1687)
+position = Vector2(612, 1624)
 
 [node name="3" type="Node2D" parent="SpawnLocation" groups=["PlayerSpawnPoint"]]
-position = Vector2(1265, 1549)
+position = Vector2(814, 1625)

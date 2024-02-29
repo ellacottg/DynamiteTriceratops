@@ -7,11 +7,10 @@ const JUMP_VELOCITY = -1600.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-func _ready():
-	$MultiplayerSynchronizer.set_multiplayer_authority(name.to_int())
+
 
 func _physics_process(delta):
-	if $MultiplayerSynchronizer.get_multiplayer_authority() == multiplayer.get_unique_id():
+	
 			# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta

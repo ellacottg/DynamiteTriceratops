@@ -48,3 +48,6 @@ shape = SubResource("CircleShape2D_4lgys")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_dcrxg")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="MultiplayerSynchronizer"]
+replication_config = SubResource("SceneReplicationConfig_dcrxg")
