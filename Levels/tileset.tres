@@ -1,10 +1,16 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://qpmcjdfnb0nw"]
+[gd_resource type="TileSet" load_steps=23 format=3 uid="uid://qpmcjdfnb0nw"]
 
 [ext_resource type="Texture2D" uid="uid://dxg4231unlt1h" path="res://Levels/testTileset.png" id="1_6eqoy"]
 [ext_resource type="Texture2D" uid="uid://bnxc1bdtgama4" path="res://Assests/dirt.png" id="2_fc1tq"]
+[ext_resource type="Texture2D" uid="uid://dcndcubbulc4b" path="res://Assests/wheat.png" id="3_ru3p5"]
 [ext_resource type="Texture2D" uid="uid://ov7eimebt7n1" path="res://Assests/grass.png" id="3_w6hud"]
 [ext_resource type="Texture2D" uid="uid://cncik8rm7277t" path="res://Assests/pitfall_back.png" id="4_e0kqh"]
 [ext_resource type="Texture2D" uid="uid://bbw6x53qhdpsb" path="res://Assests/pitfall_top.png" id="5_umi0k"]
+[ext_resource type="Texture2D" uid="uid://buub0hslm53dm" path="res://Assests/coal_stone_block.png" id="6_yu4sa"]
+[ext_resource type="Texture2D" uid="uid://dcocrwsarrrsx" path="res://Assests/Iron_stone_block.png" id="7_wvr2q"]
+[ext_resource type="Texture2D" uid="uid://c5xg67hvsmt8x" path="res://Assests/stone_block.png" id="8_yu0s8"]
+[ext_resource type="Texture2D" uid="uid://bk2i34p1teovj" path="res://Assests/wood_drop.png" id="9_abqlf"]
+[ext_resource type="Texture2D" uid="uid://7daj2cgiqmj3" path="res://Assests/Bricks.png" id="10_5c24p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2mib4"]
 texture = ExtResource("1_6eqoy")
@@ -45,6 +51,13 @@ texture_region_size = Vector2i(128, 128)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2efh"]
+texture = ExtResource("3_ru3p5")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bsb0"]
 texture = ExtResource("3_w6hud")
 texture_region_size = Vector2i(128, 128)
@@ -66,6 +79,41 @@ texture_region_size = Vector2i(128, 128)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cq06i"]
+texture = ExtResource("6_yu4sa")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dusph"]
+texture = ExtResource("7_wvr2q")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m75nd"]
+texture = ExtResource("8_yu0s8")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd1r8"]
+texture = ExtResource("9_abqlf")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0ml8"]
+texture = ExtResource("10_5c24p")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
@@ -74,3 +122,9 @@ sources/1 = SubResource("TileSetAtlasSource_nbwlg")
 sources/2 = SubResource("TileSetAtlasSource_0bsb0")
 sources/3 = SubResource("TileSetAtlasSource_7ad6a")
 sources/4 = SubResource("TileSetAtlasSource_8j737")
+sources/5 = SubResource("TileSetAtlasSource_cq06i")
+sources/6 = SubResource("TileSetAtlasSource_dusph")
+sources/7 = SubResource("TileSetAtlasSource_m75nd")
+sources/8 = SubResource("TileSetAtlasSource_gd1r8")
+sources/9 = SubResource("TileSetAtlasSource_f0ml8")
+sources/10 = SubResource("TileSetAtlasSource_j2efh")
