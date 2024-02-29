@@ -1,13 +1,53 @@
-[gd_scene load_steps=9 format=3 uid="uid://2w78n42tnyct"]
+[gd_scene load_steps=12 format=3 uid="uid://2w78n42tnyct"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_moch7"]
-[ext_resource type="Texture2D" uid="uid://dh83as4utdnoh" path="res://icon.svg" id="1_qdup2"]
+[ext_resource type="Texture2D" uid="uid://cik8u2bg1adlm" path="res://Assests/walk_cycal_c1x.png" id="2_uqt0o"]
 [ext_resource type="PackedScene" uid="uid://drrul8r8xywv3" path="res://Components/Attack/AttackComponent.tscn" id="3_qd4bd"]
 [ext_resource type="PackedScene" uid="uid://mxvp85cfyofv" path="res://Components/Pickup/PickupComponent.tscn" id="4_erapm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_517xn"]
 radius = 63.0
 height = 254.0
+
+[sub_resource type="Animation" id="Animation_448s0"]
+resource_name = "walk_left"
+length = 1.16
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="Animation" id="Animation_x3gel"]
+resource_name = "walk_right"
+length = 1.16
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pym2y"]
+_data = {
+"walk_left": SubResource("Animation_448s0"),
+"walk_right": SubResource("Animation_x3gel")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4l3i"]
 size = Vector2(124, 123)
@@ -27,9 +67,19 @@ script = ExtResource("1_moch7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_517xn")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 2)
-texture = ExtResource("1_qdup2")
+[node name="HeroCharacter" type="Sprite2D" parent="."]
+position = Vector2(3.25, -4.99999)
+scale = Vector2(1.32796, 1.12664)
+texture = ExtResource("2_uqt0o")
+hframes = 7
+vframes = 3
+frame = 9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HeroCharacter"]
+libraries = {
+"": SubResource("AnimationLibrary_pym2y")
+}
+next/walk_left = &"walk_left"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)

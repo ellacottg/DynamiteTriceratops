@@ -25,7 +25,13 @@ public partial class MenuSystem : Node2D
 		GetTree().Quit();
 	}
 	
+	private void _on_btn_multiplayer_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://MultiPlayer/SetupScene.tscn");
+	}
 }
+
+
 
 
 
