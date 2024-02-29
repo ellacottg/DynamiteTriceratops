@@ -1,6 +1,10 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://qpmcjdfnb0nw"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://qpmcjdfnb0nw"]
 
 [ext_resource type="Texture2D" uid="uid://dxg4231unlt1h" path="res://Levels/testTileset.png" id="1_6eqoy"]
+[ext_resource type="Texture2D" uid="uid://bnxc1bdtgama4" path="res://Assests/dirt.png" id="2_fc1tq"]
+[ext_resource type="Texture2D" uid="uid://ov7eimebt7n1" path="res://Assests/grass.png" id="3_w6hud"]
+[ext_resource type="Texture2D" uid="uid://cncik8rm7277t" path="res://Assests/pitfall_back.png" id="4_e0kqh"]
+[ext_resource type="Texture2D" uid="uid://bbw6x53qhdpsb" path="res://Assests/pitfall_top.png" id="5_umi0k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2mib4"]
 texture = ExtResource("1_6eqoy")
@@ -34,7 +38,39 @@ texture_region_size = Vector2i(128, 128)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nbwlg"]
+texture = ExtResource("2_fc1tq")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bsb0"]
+texture = ExtResource("3_w6hud")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ad6a"]
+texture = ExtResource("4_e0kqh")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8j737"]
+texture = ExtResource("5_umi0k")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2mib4")
+sources/1 = SubResource("TileSetAtlasSource_nbwlg")
+sources/2 = SubResource("TileSetAtlasSource_0bsb0")
+sources/3 = SubResource("TileSetAtlasSource_7ad6a")
+sources/4 = SubResource("TileSetAtlasSource_8j737")
