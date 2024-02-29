@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=35 format=3 uid="uid://qpmcjdfnb0nw"]
+[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://qpmcjdfnb0nw"]
 
 [ext_resource type="Texture2D" uid="uid://dxg4231unlt1h" path="res://Levels/testTileset.png" id="1_6eqoy"]
 [ext_resource type="Texture2D" uid="uid://bnxc1bdtgama4" path="res://Assests/dirt.png" id="2_fc1tq"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://3h4adgl7qhs1" path="res://Assests/tree.png" id="9_116p8"]
 [ext_resource type="Texture2D" uid="uid://bk2i34p1teovj" path="res://Assests/wood_drop.png" id="9_abqlf"]
 [ext_resource type="Texture2D" uid="uid://7daj2cgiqmj3" path="res://Assests/Bricks.png" id="10_5c24p"]
+[ext_resource type="Texture2D" uid="uid://ci8acbabjtm2r" path="res://Assests/Grass_Slop_alt1.png" id="10_qaqr3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2mib4"]
 texture = ExtResource("1_6eqoy")
@@ -112,6 +113,13 @@ texture_region_size = Vector2i(128, 128)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lk6y4"]
+texture = ExtResource("10_qaqr3")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bsb0"]
 texture = ExtResource("3_w6hud")
 texture_region_size = Vector2i(128, 128)
@@ -188,3 +196,4 @@ sources/13 = SubResource("TileSetAtlasSource_0lbi1")
 sources/14 = SubResource("TileSetAtlasSource_na42j")
 sources/15 = SubResource("TileSetAtlasSource_xqwke")
 sources/16 = SubResource("TileSetAtlasSource_g4k8c")
+sources/17 = SubResource("TileSetAtlasSource_lk6y4")
