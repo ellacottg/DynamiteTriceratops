@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7piennwx2jtj"]
+[gd_scene load_steps=9 format=3 uid="uid://c7piennwx2jtj"]
 
 [ext_resource type="TileSet" uid="uid://qpmcjdfnb0nw" path="res://Levels/tileset.tres" id="1_bchf5"]
 [ext_resource type="PackedScene" uid="uid://cdvunfg8rkpxo" path="res://Player/player_2.tscn" id="2_lju65"]
 [ext_resource type="PackedScene" uid="uid://dhld2bao7fg1d" path="res://Item/Breakable.tscn" id="3_g2d0a"]
+[ext_resource type="Texture2D" uid="uid://cik8u2bg1adlm" path="res://Assests/walk_cycal_c1x.png" id="4_a3rat"]
 
 [sub_resource type="GDScript" id="GDScript_8qwof"]
 resource_name = "EnemyType1"
@@ -36,6 +37,46 @@ func _physics_process(delta):
 	move_and_slide()
 "
 
+[sub_resource type="Animation" id="Animation_x3gel"]
+resource_name = "walk_right"
+length = 1.16
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_448s0"]
+resource_name = "walk_left"
+length = 1.16
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pym2y"]
+_data = {
+"walk_left": SubResource("Animation_448s0"),
+"walk_right": SubResource("Animation_x3gel")
+}
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -68,3 +109,15 @@ position = Vector2(4.02246, -152.785)
 [node name="EnemyType1" parent="Ememy1" instance=ExtResource("2_lju65")]
 position = Vector2(406.022, -254.785)
 script = SubResource("GDScript_8qwof")
+
+[node name="HeroCharacter" type="Sprite2D" parent="."]
+position = Vector2(619, 1936)
+texture = ExtResource("4_a3rat")
+hframes = 7
+vframes = 3
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HeroCharacter"]
+libraries = {
+"": SubResource("AnimationLibrary_pym2y")
+}
