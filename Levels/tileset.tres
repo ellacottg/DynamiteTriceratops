@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://b7hloda2krosb" path="res://Assests/igloo.png" id="4_v7tqx"]
 [ext_resource type="Texture2D" uid="uid://bkdj0idpst4x2" path="res://Assests/iglooxeditt.PNG" id="5_aougx"]
 [ext_resource type="Texture2D" uid="uid://bbw6x53qhdpsb" path="res://Assests/pitfall_top.png" id="5_umi0k"]
-[ext_resource type="Texture2D" uid="uid://cxfaiqws4gpdm" path="res://Assests/Grass_Slop.png" id="6_rtjr6"]
+[ext_resource type="Texture2D" uid="uid://7rwbjat2if1i" path="res://Assests/Grass_Slop.png" id="6_rtjr6"]
 [ext_resource type="Texture2D" uid="uid://buub0hslm53dm" path="res://Assests/coal_stone_block.png" id="6_yu4sa"]
 [ext_resource type="Texture2D" uid="uid://bt0p65akckf38" path="res://Assests/Grass_Slop_alt.png" id="7_qlsp8"]
 [ext_resource type="Texture2D" uid="uid://dcocrwsarrrsx" path="res://Assests/Iron_stone_block.png" id="7_wvr2q"]
 [ext_resource type="Texture2D" uid="uid://hru0u8iex17f" path="res://Assests/mineshaft_enterence.png" id="8_2xnmj"]
 [ext_resource type="Texture2D" uid="uid://c5xg67hvsmt8x" path="res://Assests/stone_block.png" id="8_yu0s8"]
-[ext_resource type="Texture2D" uid="uid://3h4adgl7qhs1" path="res://Assests/tree.png" id="9_116p8"]
+[ext_resource type="Texture2D" uid="uid://dboev742j47kb" path="res://Assests/tree.png" id="9_116p8"]
 [ext_resource type="Texture2D" uid="uid://bk2i34p1teovj" path="res://Assests/wood_drop.png" id="9_abqlf"]
 [ext_resource type="Texture2D" uid="uid://7daj2cgiqmj3" path="res://Assests/Bricks.png" id="10_5c24p"]
 [ext_resource type="Texture2D" uid="uid://ci8acbabjtm2r" path="res://Assests/Grass_Slop_alt1.png" id="10_qaqr3"]
@@ -57,6 +57,7 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2efh"]
 texture = ExtResource("3_ru3p5")
@@ -91,6 +92,7 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -47, -64, 14, -3, 64, 55, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na42j"]
 texture = ExtResource("7_qlsp8")
@@ -98,6 +100,7 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(55, -64, 64, -64, 64, 64, -64, 64, -64, 51)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xqwke"]
 texture = ExtResource("8_2xnmj")
@@ -126,6 +129,7 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ad6a"]
 texture = ExtResource("4_e0kqh")
@@ -133,6 +137,7 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8j737"]
 texture = ExtResource("5_umi0k")
@@ -140,6 +145,7 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cq06i"]
 texture = ExtResource("6_yu4sa")

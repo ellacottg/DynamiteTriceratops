@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdvunfg8rkpxo"]
+[gd_scene load_steps=9 format=3 uid="uid://cdvunfg8rkpxo"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_dvwod"]
 [ext_resource type="Texture2D" uid="uid://cik8u2bg1adlm" path="res://Assests/walk_cycal_c1x.png" id="2_d7vp6"]
 [ext_resource type="PackedScene" uid="uid://drrul8r8xywv3" path="res://Components/Attack/AttackComponent.tscn" id="3_8woo6"]
-[ext_resource type="PackedScene" uid="uid://mxvp85cfyofv" path="res://Components/Pickup/PickupComponent.tscn" id="4_hvwtx"]
 
 [sub_resource type="Animation" id="Animation_448s0"]
 resource_name = "walk_left"
@@ -52,9 +51,6 @@ height = 254.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4l3i"]
 size = Vector2(124, 123)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4lgys"]
-radius = 127.0
-
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 0
 script = ExtResource("1_dvwod")
@@ -83,8 +79,3 @@ attack_damage = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
 position = Vector2(127, -0.5)
 shape = SubResource("RectangleShape2D_g4l3i")
-
-[node name="PickupComponent" parent="." instance=ExtResource("4_hvwtx")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupComponent"]
-shape = SubResource("CircleShape2D_4lgys")

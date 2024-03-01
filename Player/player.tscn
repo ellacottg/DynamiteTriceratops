@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://2w78n42tnyct"]
+[gd_scene load_steps=10 format=3 uid="uid://2w78n42tnyct"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_moch7"]
 [ext_resource type="Texture2D" uid="uid://cik8u2bg1adlm" path="res://Assests/walk_cycal_c1x.png" id="2_uqt0o"]
 [ext_resource type="PackedScene" uid="uid://drrul8r8xywv3" path="res://Components/Attack/AttackComponent.tscn" id="3_qd4bd"]
-[ext_resource type="PackedScene" uid="uid://mxvp85cfyofv" path="res://Components/Pickup/PickupComponent.tscn" id="4_erapm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_517xn"]
 radius = 63.0
@@ -52,9 +51,6 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4l3i"]
 size = Vector2(124, 123)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4lgys"]
-radius = 127.0
-
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_dcrxg"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
@@ -90,11 +86,6 @@ attack_damage = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
 position = Vector2(127, -0.5)
 shape = SubResource("RectangleShape2D_g4l3i")
-
-[node name="PickupComponent" parent="." instance=ExtResource("4_erapm")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupComponent"]
-shape = SubResource("CircleShape2D_4lgys")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_dcrxg")
