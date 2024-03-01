@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dboev742j47kb"
-path="res://.godot/imported/tree.png-82cf32dc3652550ae8ffacc5114f15c2.ctex"
+uid="uid://c7ard7k6cc0up"
+path="res://.godot/imported/Grass_Slop_alt - Copy.png-02920143ef06e548404d9065842caea7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/tree.png"
-dest_files=["res://.godot/imported/tree.png-82cf32dc3652550ae8ffacc5114f15c2.ctex"]
+source_file="res://Assests/Grass_Slop_alt - Copy.png"
+dest_files=["res://.godot/imported/Grass_Slop_alt - Copy.png-02920143ef06e548404d9065842caea7.ctex"]
 
 [params]
 
